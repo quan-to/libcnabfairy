@@ -1,0 +1,51 @@
+{
+  "name": "@contaquanto/libcnabfairy",
+  "version": "1.0.0",
+  "description": "Transforming Dinosaurs into Fairies (or at least dinofairies)",
+  "main": "dist/index.js",
+  "scripts": {
+    "clear": "rimraf ./dist/*",
+    "build": "npm run clear && babel src --ignore *.spec.js --out-dir dist --copy-files",
+    "lint": "eslint src/**",
+    "repl": "nodemon --config ./repl/nodemon.json ./repl.js --exec babel-node",
+    "test": "jest --coverage --forceExit --runInBand",
+    "test:watch": "jest --watch --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quan-to/libcnabfairy.git"
+  },
+  "keywords": [
+    "CNAB",
+    "Bank"
+  ],
+  "author": "Quanto",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/quan-to/libcnabfairy/issues"
+  },
+  "homepage": "https://github.com/quan-to/libcnabfairy#readme",
+  "dependencies": {
+    "bignumber.js": "^8.0.1",
+    "moment-timezone": "^0.5.23"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-syntax-flow": "^7.0.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "flow-bin": "^0.86.0",
+    "flow-runtime": "^0.17.0",
+    "rimraf": "^2.6.2"
+  }
+}
